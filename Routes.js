@@ -50,11 +50,18 @@ router.post('/foundItem/:id', async (req, res) => {
     const { founderEmail } = req.body;
     // const { founderName, founderEmail, foundLocation } = req.body;
 
-    // TODO: SEND EMAIL TO USER
+    // TODO: MARK THE ITEM AS PENDING
 
+    // TODO: SEND EMAIL TO BOTH PARTIES
 
     res.send({message: "Owner has been notified"});
 });
+
+// TODO: ADD A ROUTE TO CONFIRM THE ITEM HAS BEEN RETURNED
+// —— Set the status to 'Found'
+
+// TODO: ADD A ROUTE TO STATE THE ITEM IS STILL LOST
+// —— Set the status to 'Lost'
 
 router.post('/foundItem/confirm', async (req, res) => {
 

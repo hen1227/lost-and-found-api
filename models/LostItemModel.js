@@ -30,6 +30,11 @@ const LostItemModel = sequelize.define('LostItem', {
     image: {
         type: DataTypes.BLOB('long'),
         allowNull: true,
+    },
+    status: {
+        type: DataTypes.ENUM('Lost', 'Found', 'Pending'),
+        allowNull: false,
+        defaultValue: 'Lost',
     }
 });
 

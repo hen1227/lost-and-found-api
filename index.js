@@ -14,9 +14,10 @@ app.use(express.urlencoded({limit: '50mb'}));
 app.use(cors());
 app.use(express.json());
 app.use('/', routes);
+
 const httpServer = createServer(app);
 
-sequelize.sync({ force: true, alter: true })
+sequelize.sync({ force: false, alter: true })
     .then(() => {
         console.log('All tables have been successfully created, if they didn\'t already exist');
         // Only start the server after the sync has completed
